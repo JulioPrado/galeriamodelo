@@ -1,0 +1,143 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+	width: 95vw;
+	background-color: var(--cor-de-fundo);
+}
+
+:root {
+	--cor-de-fundo: #000;
+}
+
+/* scroller ---------------------------------------*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #121212; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00ff1d; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2cab3b; 
+}
+
+section {
+	width: 97vw;
+}
+
+.containerLista{
+	margin: 0 auto;
+    width: 95vw;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+}
+
+.botOrientacao{
+	top: 0;
+	position: sticky;
+	float: left;
+	box-shadow: 2px 2px 3px #000;
+}
+
+
+#barraLateralDestaques{
+	display: inline-block;
+ /* calcular fotosWidth * numFotos + margens*/
+}
+
+a.fotosLista{
+	background-image: url(imagens/error.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	box-shadow: 3px 3px 4px black;
+}
+
+.containerLista a:hover{
+	animation: selecionar .5s;
+}
+
+section#destaques div.containerLista a.fotosLista{
+	width: 150px;
+	height: 20vh;
+	min-height: 150px;
+	display: inline-block;
+	margin: 5px;
+}
+
+
+.fotoAtiva, .fotoAtivaDestaques{
+	width: 90vw;
+	height: 75vh;
+	margin: 10px auto;
+	background-color: var(--cor-de-fundo);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.novaDiv .fotosLista{
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	margin: 5px;
+}
+
+.legenda{
+	display: block;
+	text-align: center;
+	font-size: 12px;
+	margin-top: -12px;
+}
+
+@keyframes selecionar {
+
+   from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+/* Media Queries ------------------------------ */
+
+@media (min-width:320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+	.fotoAtiva{
+
+	}
+@media (min-width:480px) { /* smartphones, Android phones, landscape iPhone */ 
+
+}
+@media (min-width:600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+	.fotoAtiva{
+
+	}
+}
+@media (min-width:801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+	.fotoAtiva{
+	}
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+	.fotoAtiva{
+	}
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */
+
+}
